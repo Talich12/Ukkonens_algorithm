@@ -2,6 +2,7 @@
 
 #include "SuffixTree.h"
 #include "Prime_alg.h"
+#include "Test.h"
 #include <chrono>
 
 
@@ -147,16 +148,8 @@ void Print_suffix_tree(Node* node) {
 }
 
 int main() {
-    auto start = chrono::high_resolution_clock::now();
-    string str = "abcabxabcdklhfjkashdkljfhaskljdhfkjlsahdfkjlhaskldjfhiuwefnsabvmaslskdgjkasdjklgldhgklj;ashdkjlfhaskljryiueohfkjsdhkjgdfshjkadskakjfgabvkaskjfvjskdbvfbskkdbfviuebyriuvqyebtoiuydoiugnsdgvjslkjfavbdfh";
-    Build_suffix_tree(str);
-    auto end = chrono::high_resolution_clock::now();
-    chrono::duration<float> duration = end - start;
-    cout << duration.count()<<endl;
-
-    auto start2 = chrono::high_resolution_clock::now();
-    SuffixTree tree = SuffixTree(str);
-    auto end2 = chrono::high_resolution_clock::now();
-    chrono::duration<float> duration2 = end2 - start2;
-    cout << duration2.count();
+    Add_test("askjfhsaklhfnlksanhdfkjsahndklfhanskjdhfklsahnkldfhasjlkdfkjh");
+    Add_test("1hg34jg12hj34g12jk3g4jk12gjh34gj12h3gb4hj1g23jh4bg12k3h4g34h12vf34fd1g2h3b4h12f3nhj4gf12gh3f4nj12g3412yt5n8465nv4619n346215675234821");
+    Add_test("j1gk 5hj31g j6 gj4h25 f8gf 6h26g451h3714 27f7 3 72efhdjsaf37126415 14891747861 3r76173584 dhsfadghjgfjdsa f23 645132grjdhcas 6657835786 4sdgfhsdjgf9sa6eta8756mdf jhvdhj 2376r 23r we 64btyuwdgfhnmas dv69198471209");
+    Run_test();
 }
