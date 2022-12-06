@@ -2,7 +2,7 @@
 
 #include "SuffixTree.h"
 #include "Prime_alg.h"
-#include "Test.h"
+#include "Test.h"не
 #include <chrono>
 
 
